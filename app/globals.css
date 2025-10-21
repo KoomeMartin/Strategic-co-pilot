@@ -32,3 +32,51 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans);
 }
+
+/* Dashboard utility classes brought over from provided HTML */
+.tile {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+.tile:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+.tile-icon {
+  background-color: #e0f2fe;
+  color: #0284c7;
+}
+.btn-primary {
+  background-color: #0078d4;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+.btn-primary:hover {
+  background-color: #005a9e;
+}
+.section-title {
+  color: #005a9e;
+  font-weight: 600;
+  border-bottom: 2px solid #e0f2fe;
+  padding-bottom: 0.5rem;
+}
+.tile-content {
+  flex-grow: 1;
+}
+.copilot-tile {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: white;
+}
+.copilot-tile .tile-icon {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #38bdf8;
+}
+.copilot-tile .btn-primary {
+  background-color: #38bdf8;
+  color: #0f172a;
+}
+.copilot-tile .btn-primary:hover {
+  background-color: #7dd3fc;
+}
