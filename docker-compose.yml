@@ -1,0 +1,13 @@
+services:
+  web:
+    build: .
+    image: chatkit-dashboard:latest
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - NEXT_PUBLIC_CHATKIT_WORKFLOW_ID=${NEXT_PUBLIC_CHATKIT_WORKFLOW_ID}
+      # Optional override
+      - CHATKIT_API_BASE=${CHATKIT_API_BASE}
+    restart: unless-stopped
